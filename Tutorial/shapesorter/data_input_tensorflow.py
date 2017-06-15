@@ -99,4 +99,12 @@ for clss in ["squares","triangles"]:
         # desired value
         fig.savefig('data/train/'+clss+'/data'+str(i)+'.png',dpi=size)   
         # close the figure
-        plt.close(fig)    
+        plt.close(fig)
+
+###############################################################################
+#Data generation is done now. We will move (a little over) a quart to validate folders
+#mv data/train/squares/data3*  data/validate/squares/
+#mv data/train/triangles/data3*  data/validate/triangles/
+
+#and we will download some script to convert the images to tensorflow shards
+###############################################################################
