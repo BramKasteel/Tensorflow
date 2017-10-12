@@ -120,7 +120,7 @@ def generate_batch(batch_size, num_skips, skip_window):
     target = skip_window  # target label at the center of the buffer
     targets_to_avoid = [skip_window]
     for j in range(num_skips):
-      while target in targets_to_avoid:
+      while target in targets_to_avoid:  #WAAROM DOEN ZE DIT RANDOM?? WAAROM IN EEN WHILE LOOP?
         target = random.randint(0, span - 1) #BRAM: one of the other labels in the buffer
       targets_to_avoid.append(target)
       batch[i * num_skips + j] = buffer[skip_window]
